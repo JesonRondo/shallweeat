@@ -6,18 +6,15 @@
   justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
-}
-.btn {
-  width: 240rpx;
-  height: 240rpx;
-  text-align: center;
   font-size: 14px;
-  color: #fff;
-  line-height: 240rpx;
 }
-.btn-c1 {
-  background-color: #ff8000;
+.panel {
+    display: flex;
 }
-.btn-c2 {
-  background-color: #ffc800;
+.panel button:first-child {
+    margin-right: 20px;
+}
+.help {
+    font-size: 14px;
+    color: #666;
 }

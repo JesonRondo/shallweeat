@@ -1,11 +1,13 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/demonstrate/index",
+    "pages/eat/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "放(xia)学(ban)吃什么",
+    "navigationBarTitleText": "禾一的小助手",
     "navigationBarTextStyle":"black"
   }
 }

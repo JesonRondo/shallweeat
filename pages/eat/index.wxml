@@ -1,0 +1,27 @@
+<view class="container">
+    <view class="txt-panel">
+      <block wx:if="{{st === 'over'}}">
+        <text>别换了</text>
+        <text>你还是自己决定吃什么吧 😩</text>
+      </block>
+      <block wx:if="{{st === 'vip'}}">
+        <text>好吧，你发现了VIP卡!!!</text>
+      </block>
+      <block wx:if="{{st === 'begin'}}">
+        <text>Hi，不知道吃什么的可怜人</text>
+        <text>请先站在街边，注意车辆和外星人</text>
+        <text>准备好了吗？</text>
+      </block>
+      <block wx:if="{{st === 'ing'}}">
+        <text>{{motto}}</text>
+      </block>
+    </view>
+    <button wx:if="{{btnSt === 'st1'}}" type="primary" bindtap="go">走吧</button>
+    <button wx:if="{{btnSt === 'st2'}}" type="default" bindtap="go">不想去这里，换一个</button>
+    <button wx:if="{{btnSt === 'st3'}}" type="default" bindtap="go">不想去这里，再换一个</button>
+    <view class="over-wrap" wx:if="{{btnSt === 'st4'}}">
+      <button type="default" disabled="true">不给点</button>
+      <view class="over-mask" bindtap="getVip"></view>
+    </view>
+    <button type="primary" class="vip-button" wx:if="{{btnSt === 'st5'}}" bindtap="useVip">VIP卡，来再一次</button>
+  </view>

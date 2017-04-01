@@ -1,0 +1,7 @@
+<view class="container">
+    <text>二维码生成好了吗？</text>
+    <view class="panel">
+        <button type="primary" bindtap="scan">扫个码</button>
+        <button type="default">楞次懵逼?</button>
+    </view>
+</view>
