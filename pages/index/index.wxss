@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  height: 100%;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.txt-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.txt-panel text {
+  color: #666;
+  font-size: 14px;
+  line-height: 2;
+  text-align: center;
+}
+.over-wrap {
+  position: relative;
+  display: flex;
+}
+.over-mask {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 60px;
+}
+.vip-button {
+  box-shadow: 0 0 50px #fbcc1a;
+  background-color: #fbcc1a;
+  animation: bing .6s infinite ease-in-out;
+}
+@keyframes bing {
+  0% {
+    box-shadow: 0 0 50px #fbcc1a;
+  }
+  50% {
+    box-shadow: 0 0 0 #fbcc1a;
+  }
+  100% {
+    box-shadow: 0 0 50px #fbcc1a;
+  }
+}
