@@ -1,7 +1,24 @@
 <view class="container">
-    <text>二维码生成好了吗？</text>
-    <view class="panel">
-        <button type="primary" bindtap="scan">扫个码</button>
-        <button type="default">楞次懵逼?</button>
-    </view>
+    <block wx:if="{{st === 'normal'}}">
+        <text>二维码生成好了吗？</text>
+        <view class="help" wx:if="{{needHelp}}">
+            <text>去下载个桌面版</text>
+            <text>https://heyai.me/download/</text>
+        </view>
+        <view class="panel">
+            <button type="primary" bindtap="scan">扫个码</button>
+            <button type="default" bindtap="help">楞次懵逼?</button>
+        </view>
+    </block>
+    <block wx:if="{{st === 'sure'}}">
+        <ul>
+            <li wx:for="{{list}}" wx:key="index">
+                <text>{{item.name}} [{{item.type}}]</text>
+            </li>
+        </ul>
+        <view class="panel">
+            <button type="primary" bindtap="makesure">确认上传</button>
+            <button type="default" bindtap="cancel">取消</button>
+        </view>
+    </block>
 </view>
