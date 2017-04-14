@@ -11,7 +11,7 @@
         </view>
     </block>
     <block wx:if="{{st === 'sure'}}">
-        <ul>
+        <ul class="list">
             <li wx:for="{{list}}" wx:key="index">
                 <text>{{item.name}} [{{item.type}}]</text>
             </li>

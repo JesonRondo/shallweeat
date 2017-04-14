@@ -15,9 +15,11 @@ Page({
       title: '禾一要上传'
     })
 
-    app.getUserInfo(function(userInfo){
-      console.log(userInfo)
+    wx.connectSocket({
+        url: 'wss://heyai.me:7773'
+    })
 
+    app.getUserInfo(function(userInfo){
       if (userInfo.nickName !== 'If🐼'
       && userInfo.nickName !== 'Else🍉') {
         wx.showToast({
