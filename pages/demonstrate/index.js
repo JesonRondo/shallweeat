@@ -16,7 +16,14 @@ Page({
     })
 
     wx.connectSocket({
+      url: 'wss://heyai.me:7773'
+    })
+
+    wx.onSocketError(function(res){
+      console.log('WebSocket连接打开失败，3s后重试！')
+      wx.connectSocket({
         url: 'wss://heyai.me:7773'
+      })
     })
 
     app.getUserInfo(function(userInfo){
@@ -32,6 +39,9 @@ Page({
         }, 2000)
       }
     })
+  },
+  onUnload:function() {
+    wx.closeSocket()
   },
   help:function () {
     this.setData({

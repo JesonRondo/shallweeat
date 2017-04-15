@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="txt-panel">
+        <text>{{motto}}</text>
+    </view>
+    <view class="btn-panel">
+        <button type="primary" bindtap="go">
+            {{clicked ? '再' : ''}}来一个
+        </button>
+    </view>
+</view>

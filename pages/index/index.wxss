@@ -21,3 +21,6 @@
 .btn-c2 {
   background-color: #ffc800;
 }
+.btn-c3 {
+  background-color: #8db8f9;
+}

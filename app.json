@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/demonstrate/index",
-    "pages/eat/index"
+    "pages/eat/index",
+    "pages/randomeat/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

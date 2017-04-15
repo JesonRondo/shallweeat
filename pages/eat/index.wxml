@@ -16,12 +16,14 @@
         <text>{{motto}}</text>
       </block>
     </view>
-    <button wx:if="{{btnSt === 'st1'}}" type="primary" bindtap="go">走吧</button>
-    <button wx:if="{{btnSt === 'st2'}}" type="default" bindtap="go">不想去这里，换一个</button>
-    <button wx:if="{{btnSt === 'st3'}}" type="default" bindtap="go">不想去这里，再换一个</button>
-    <view class="over-wrap" wx:if="{{btnSt === 'st4'}}">
-      <button type="default" disabled="true">不给点</button>
-      <view class="over-mask" bindtap="getVip"></view>
+    <view class="btn-panel">
+      <button wx:if="{{btnSt === 'st1'}}" type="primary" bindtap="go">走吧</button>
+      <button wx:if="{{btnSt === 'st2'}}" type="default" bindtap="go">不想去这里，换一个</button>
+      <button wx:if="{{btnSt === 'st3'}}" type="default" bindtap="go">不想去这里，再换一个</button>
+      <view class="over-wrap" wx:if="{{btnSt === 'st4'}}">
+        <button type="default" disabled="true">不给点</button>
+        <view class="over-mask" bindtap="getVip"></view>
+      </view>
+      <button type="primary" class="vip-button" wx:if="{{btnSt === 'st5'}}" bindtap="useVip">VIP卡，来再一次</button>
     </view>
-    <button type="primary" class="vip-button" wx:if="{{btnSt === 'st5'}}" bindtap="useVip">VIP卡，来再一次</button>
   </view>

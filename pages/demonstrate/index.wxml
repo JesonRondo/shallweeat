@@ -7,7 +7,7 @@
         </view>
         <view class="panel">
             <button type="primary" bindtap="scan">扫个码</button>
-            <button type="default" bindtap="help">楞次懵逼?</button>
+            <button wx:if="{{!needHelp}}" type="default" bindtap="help">楞次懵逼?</button>
         </view>
     </block>
     <block wx:if="{{st === 'sure'}}">

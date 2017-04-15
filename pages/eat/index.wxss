@@ -7,9 +7,11 @@
   box-sizing: border-box;
 }
 .txt-panel {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .txt-panel text {
   color: #666;
@@ -17,17 +19,21 @@
   line-height: 2;
   text-align: center;
 }
+.btn-panel {
+  padding-top: 40rpx;
+  height: 340rpx;
+}
 .over-wrap {
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 .over-mask {
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 0;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 60px;
+  top: 0;
+  right: 0;
 }
 .vip-button {
   box-shadow: 0 0 50px #26ab28;
