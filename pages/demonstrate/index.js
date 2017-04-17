@@ -16,13 +16,13 @@ Page({
     })
 
     wx.connectSocket({
-      url: 'wss://heyai.me:7773'
+      url: 'wss://heyai.me/wss'
     })
 
     wx.onSocketError(function(res){
       console.log('WebSocket连接打开失败，3s后重试！')
       wx.connectSocket({
-        url: 'wss://heyai.me:7773'
+        url: 'wss://heyai.me/wss'
       })
     })
 
