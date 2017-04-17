@@ -1,1 +1,13 @@
 /* pages/randomeat/index.wxss */
+.top {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+.top text {
+    text-align: center;
+    font-size: 12px;
+    line-height: 10px;
+    color: #999;
+}

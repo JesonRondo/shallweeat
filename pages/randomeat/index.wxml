@@ -1,5 +1,10 @@
 <view class="container">
     <view class="txt-panel">
+        <view class="top" wx:if="{{top.length > 0}}">
+            <text wx:for="{{top}}" wx:key="{{index}}">
+                {{item.name + ' combo x' + item.num}}
+            </text>
+        </view>
         <text>{{motto}}</text>
     </view>
     <view class="btn-panel">
