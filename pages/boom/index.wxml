@@ -1,0 +1,27 @@
+<!--pages/boom/index.wxml-->
+<view class="container">
+  <scroll-view wx:if="{{ notes.length > 0 }}"
+    class="boom-panel" scroll-y enable-back-to-top>
+    <view class="{{ index === currentOptIdx ? 'line-selected' : 'line' }}"
+      data-index="{{ index }}"
+      wx:for="{{ notes }}" wx:key="idx"
+      bind:longpress="boomPress">
+      <image class="checker" src="/assets/icon/radio_sel.png"></image>
+      <view class="boom boom__undo" wx:if="{{ item.status === 'undo' }}">
+        <text>{{ item.msg }}</text>
+      </view>
+      <view class="boom boom__done" wx:elif="{{ item.status === 'done' }}">
+        <text>{{ item.msg }}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="boom-panel boom-panel-empty" wx:else>
+    <text>空空如也...</text>
+  </view>
+  <button class="btn" wx:if="{{ !atListener }}" type="primary" bindtap="tapVoiceButton">
+    {{ voiceButtonName }}
+  </button>
+  <button class="btn" wx:elif="{{ atListener }}" type="warn" bindtap="tapVoiceButton">
+    {{ voiceButtonName }}
+  </button>
+</view>

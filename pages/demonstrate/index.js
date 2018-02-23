@@ -30,7 +30,8 @@ Page({
       if (userInfo.nickName !== 'If🐼'
       && userInfo.nickName !== 'Else🍉') {
         wx.showToast({
-          title: '你用不了哦！',
+          title: '你不是禾一！',
+          icon: 'none',
           mask: true,
           duration: 2000
         })

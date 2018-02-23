@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  height: 100%;
+  padding: 10px 40px 40px;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.checker {
+  width: 18px;
+  height: 18px;
+}
+
+.line .checker {
+  display: none;
+}
+
+.line,
+.line-selected {
+  position: relative;
+}
+
+.line-selected .checker {
+  position: absolute;
+  top: 8px;
+  left: 2px;
+}
+
+.line-selected .boom {
+  margin-left:30px;
+}
+
+.boom-panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.boom-panel-empty {
+  align-items: center;
+  justify-content: center;
+}
+
+.boom-panel-empty text {
+    font-size: 12px;
+    color: #999;
+}
+
+.btn {
+  margin-top: 40px;
+}
+
+.boom {
+  display: inline-block;
+  padding: 4px 14px 6px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+}
+
+.boom__undo {
+  background-color: #1b8ff5;
+}
+
+.boom__done {
+  background-color: #ccc;
+}
+
+.boom text {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #fff;
+}

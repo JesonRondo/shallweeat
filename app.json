@@ -1,14 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/demonstrate/index",
     "pages/eat/index",
-    "pages/randomeat/index"
+    "pages/randomeat/index",
+    "pages/boom/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "禾一的小助手",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

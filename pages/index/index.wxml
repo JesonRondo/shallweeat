@@ -1,11 +1,18 @@
 <view class="container">
+  <view class="column">
     <navigator class="btn btn-c1" url="/pages/eat/index">
         上路找吃的
     </navigator>
     <navigator class="btn btn-c2" url="/pages/randomeat/index">
         随机个吃的
     </navigator>
-    <navigator class="btn btn-c3" url="/pages/demonstrate/index">
+  </view>
+  <view class="column">
+    <navigator class="btn btn-c3" url="/pages/boom/index">
+        闪念胶囊
+    </navigator>
+    <navigator class="btn btn-c4" url="/pages/demonstrate/index">
         禾一要上传
     </navigator>
+  </view>
 </view>
