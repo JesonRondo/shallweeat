@@ -173,8 +173,17 @@ Page({
             }
           })
         },
-        fail: function (res) {
-          that.voiceFail();
+        fail: function (err) {
+          err && console.log(err);
+          if (err && err.errMsg && err.errMsg.indexOf('auth denied') > -1) {
+            that.voiceFail('没有录音权限 T T');
+          } else {
+            that.voiceFail();
+          }
+          that.setData({
+            voiceButtonName: '巴拉巴拉',
+            atListener: false
+          })
         }
       })
       setTimeout(function () {
@@ -186,11 +195,11 @@ Page({
     }
   },
 
-  voiceFail: function () {
+  voiceFail: function (msg) {
     wx.hideToast();
     //录音失败
     wx.showToast({
-      title: '没听清你说的啥～',
+      title: msg || '没听清你说的啥～',
       icon: 'none',
       duration: 2000,
       mask: true
